@@ -28,7 +28,7 @@
 {
     [super viewDidLoad];
 
-  //UITabBarController created progrmatically
+    //UITabBarController created progrmatically
     tabBarController =[[UITabBarController alloc]init];
     CGRect tabBarFrame;
     tabBarFrame = CGRectMake(0, 240, 320, 200);
@@ -37,14 +37,19 @@
 //creating an instance of every controller in application
     lookbookViewController = [[LookbookViewController alloc]initWithNibName:@"LookbookViewController" bundle:nil];
     [lookbookViewController setTitle:@"Lookbook"];
+    lookbookViewController.tabBarItem.image = [UIImage imageNamed:@"photo.png"];
     trendsViewController = [[TrendsViewController alloc]initWithNibName:@"TrendsViewController" bundle: nil];
     [trendsViewController setTitle:@"Trends"];
+    trendsViewController.tabBarItem.image = [UIImage imageNamed:@"shopping-bag.png"];
     adviceViewController = [[GetAdviceViewController alloc]initWithNibName:@"GetAdviceViewController" bundle:nil];
     [adviceViewController setTitle:@"GetAdvice"];
+    adviceViewController.tabBarItem.image = [UIImage imageNamed:@"question.png"];
     servicesViewController = [[ServicesViewController alloc]initWithNibName:@"ServicesViewController" bundle:nil];
     [servicesViewController setTitle:@"Services"];
+    servicesViewController.tabBarItem.image = [UIImage imageNamed:@"spiral.png"];
     moreViewController = [[MoreViewController  alloc]initWithNibName:@"MoreViewController" bundle:nil];
     [moreViewController setTitle:@"More"];
+    moreViewController.tabBarItem.image = [UIImage imageNamed:@"wind.png"];
     
 //initializing array with the created controllers
     tabBarController.viewControllers = [NSArray arrayWithObjects:lookbookViewController, trendsViewController, adviceViewController, servicesViewController, moreViewController, nil];
